@@ -5,21 +5,21 @@
  * Plugin Name:       NinjaScanner Activator
  * Plugin URI:        https://github.com/wp-activators/ninjascanner-activator
  * Description:       NinjaScanner Plugin Activator
- * Version:           1.0.0
+ * Version:           1.1.0
  * Requires at least: 3.1.0
- * Requires PHP:      7.1
+ * Requires PHP:      7.2
  * Author:            mohamedhk2
  * Author URI:        https://github.com/mohamedhk2
  **/
 
 defined( 'ABSPATH' ) || exit;
-const NINJA_SCANNER_ACTIVATOR_ACTIVATOR_NAME   = 'NinjaScanner Activator';
-const NINJA_SCANNER_ACTIVATOR_ACTIVATOR_DOMAIN = 'ninjascanner-activator';
+const NINJA_SCANNER_ACTIVATOR_NAME   = 'NinjaScanner Activator';
+const NINJA_SCANNER_ACTIVATOR_DOMAIN = 'ninjascanner-activator';
 require_once __DIR__ . DIRECTORY_SEPARATOR . 'functions.php';
 if (
 	activator_admin_notice_ignored()
-	|| activator_admin_notice_plugin_install( 'ninjascanner/index.php', 'ninjascanner', 'NinjaScanner', NINJA_SCANNER_ACTIVATOR_ACTIVATOR_NAME, NINJA_SCANNER_ACTIVATOR_ACTIVATOR_DOMAIN )
-	|| activator_admin_notice_plugin_activate( 'ninjascanner/index.php', NINJA_SCANNER_ACTIVATOR_ACTIVATOR_NAME, NINJA_SCANNER_ACTIVATOR_ACTIVATOR_DOMAIN )
+	|| activator_admin_notice_plugin_install( 'ninjascanner/index.php', 'ninjascanner', 'NinjaScanner', NINJA_SCANNER_ACTIVATOR_NAME, NINJA_SCANNER_ACTIVATOR_DOMAIN )
+	|| activator_admin_notice_plugin_activate( 'ninjascanner/index.php', NINJA_SCANNER_ACTIVATOR_NAME, NINJA_SCANNER_ACTIVATOR_DOMAIN )
 ) {
 	return;
 }
